@@ -1,29 +1,62 @@
+/* 全体の背景 */
 .main {
     background-color: #0e1117;
+    color: #ffffff;
 }
-/* タイトル */
+
+/* メインタイトルのグラデーション */
 .stTitle {
-    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 3.5rem !important;
-    font-weight: 800;
+    font-size: 3rem !important;
+    margin-bottom: 1.5rem;
 }
-/* フォームのカード */
+
+/* 入力フォームのカードデザイン */
 .stForm {
-    background-color: #1d232c;
-    border: 2px solid #30363d;
-    border-radius: 20px;
-    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #30363d;
+    background-color: #161b22;
+    padding: 2rem;
 }
-/* 勝者のハイライト */
-.winner-row {
-    background-color: #064e3b !important;
-    color: #34d399 !important;
+
+/* 判定実行ボタン */
+div.stButton > button:first-child {
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem 2rem;
     font-weight: bold;
+    transition: 0.3s;
+    width: 100%;
 }
-/* 敗者のスタイル */
-.loser-text {
-    color: #4b5563;
-    text-decoration: line-through;
+
+div.stButton > button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,242,254,0.4);
+}
+
+/* データフレーム（表）のカスタマイズ */
+[data-testid="stDataFrame"] {
+    border: 1px solid #30363d;
+    border-radius: 10px;
+}
+
+/* 表のヘッダーをテック風に */
+[data-testid="stDataFrame"] th {
+    background-color: #1f2937 !important;
+    color: #00f2fe !important;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* サイドバー */
+[data-testid="stSidebar"] {
+    background-color: #0d1117;
+    border-right: 1px solid #30363d;
 }
